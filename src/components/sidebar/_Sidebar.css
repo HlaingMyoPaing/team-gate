@@ -1,0 +1,46 @@
+.sidebar{
+width: 220px; min-height: 100vh; flex-shrink: 0;
+background: var(--card);
+border-right: 1px solid color-mix(in srgb, var(--muted) 20%, transparent);
+box-shadow: var(--shadow);
+position: sticky; top: 0; padding: 1rem 0;
+transition: width .18s ease, transform .18s ease;
+z-index: 9;
+}
+
+.nav-link.active { background: rgba(37,99,235,.08); border-left: 3px solid #2563eb; color: #2563eb; }
+
+/* collapsed rail for desktop */
+.sidebar.collapsed{ width: 64px; }
+
+/* nav */
+nav ul{ list-style:none; margin:0; padding:0; }
+.nav-link{
+display:flex; align-items:center; gap:.75rem; padding:.75rem 1rem;
+text-decoration:none; color:var(--text);
+border-left:3px solid transparent; transition:background .15s,color .15s;
+}
+.nav-link:hover{
+background: color-mix(in srgb, var(--primary) 10%, transparent);
+color: var(--primary); border-left-color: var(--primary);
+}
+.icon{ font-size:1.2rem; width:24px; text-align:center; }
+.label{ font-size:.95rem; font-weight:500; white-space:nowrap; }
+
+/* Desktop: center icons when collapsed */
+@media (min-width: 769px){
+.sidebar.collapsed .nav-link{ justify-content:center; padding:.75rem 0; }
+.sidebar.collapsed .icon{ width:auto; }
+}
+
+/* Mobile/tablet ≤768px: turn into drawer */
+@media (max-width: 768px){
+.sidebar{
+position: fixed; left:0; top:56px; height: calc(100vh - 56px);
+width: 240px; transform: translateX(-100%); /* hidden by default */
+}
+/* When open==true we remove 'collapsed' (parent controls class) so it slides in */
+.sidebar:not(.collapsed){ transform: translateX(0); }
+/* In drawer mode we always show labels */
+.sidebar .label{ display:inline; }
+}

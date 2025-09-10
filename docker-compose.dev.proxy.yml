@@ -1,0 +1,23 @@
+version: '3.8'
+networks:
+  kong-net:
+    external: true
+    name: kong-net
+include:
+  - ./docker-compose.yml
+
+services:
+  dev-proxy-server:
+    image: nginx:stable-alpine-perl
+    container_name: dev-proxy-server
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "3001:80"
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - team-gate
+    networks:
+      - kong-net

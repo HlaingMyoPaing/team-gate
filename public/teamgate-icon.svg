@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TeamGate TG lettermark">
+  <title>TeamGate TG Lettermark</title>
+  <defs>
+    <style>
+      .stroke { fill: none; stroke: #0ea5a2; stroke-width: 44; stroke-linecap: round; stroke-linejoin: round; }
+      .fill   { fill: #0b7285; }
+    </style>
+  </defs>
+  <path class="stroke" d="M384 256a128 128 0 1 1-60.5-110"/>
+  <rect class="fill" x="112" y="120" width="176" height="36" rx="18"/>
+  <rect class="fill" x="188" y="156" width="36" height="220" rx="18"/>
+  <rect class="fill" x="324" y="240" width="84" height="36" rx="18"/>
+</svg>
