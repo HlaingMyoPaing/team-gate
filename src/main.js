@@ -3,7 +3,7 @@ import App from "./App.vue";
 import i18n from "./i18n";
 import router from "./router";
 
-import { keycloak, initKeycloak } from "./plugins/keycloak"; // <-- correct names
+import { keycloak, initKeycloak } from "./plugins/keycloak"; // Keycloak instance + init function
 
 // styles
 import "bootstrap/dist/css/bootstrap.min.css";

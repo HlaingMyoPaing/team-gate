@@ -24,13 +24,11 @@ const routes = [
 		 meta: { requiresAuth: true }
 
 		}
-		// ထပ်ပြီး pages => Kong, Grafana, Zabbix routes
-		// { path: '/grafana', component: GrafanaView }
 	]
 }]
 
 const router = createRouter({
-  history: createWebHistory('/my-vue/'),
+  history: createWebHistory('/vue/'),
   routes
 })
 

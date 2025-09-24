@@ -67,7 +67,6 @@ export default {
     const links = {
       kong: "/kong/",
       grafana: "/grafana/",
-      zabbix: "/zabbix/",
     };
 
     // ----- Lifecycle -----

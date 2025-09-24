@@ -16,9 +16,7 @@ export async function initKeycloak() {
       const ok = await keycloak.init({
          onLoad: 'check-sso', // or 'login-required'
          checkLoginIframe: false,
-         // comment this out if you’re not on https or not using localhost:
          silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html'
-         // no redirectUri needed for check-sso
       })
       return ok
    } catch (err) {

@@ -9,8 +9,7 @@ export default {
 			type: Object,
 			default: () => ({
 				kong: process.env.VUE_APP_KONG_ADMIN_GUI_URL,
-				grafana: process.env.VUE_APP_GRAFANA_URL,
-				zabbix: process.env.VUE_APP_ZABBIX_URL
+				grafana: process.env.VUE_APP_GRAFANA_URL
 			})
 		}
 	},
@@ -115,14 +114,6 @@ export default {
 				href: props.links.grafana,
 				icon: '📊',
 				iconSrc: require('@/assets/icons/grafana.svg'),
-				badgeBg: ''
-			},
-			{
-				title: 'Zabbix',
-				subtitle: 'Monitoring',
-				href: props.links.zabbix,
-				icon: '📈',
-				iconSrc: require('@/assets/icons/zabbix.svg'),
 				badgeBg: ''
 			}
 		])) //badgeBg: 'linear-gradient(135deg,#e11d48,#be123c)'
